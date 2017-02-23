@@ -1,0 +1,124 @@
+body {
+	font-family: 'Lato', sans-serif;
+	font-weight: 100;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+a {
+	color: #d98026
+} 
+a:hover {
+	color: #ff8000;
+	text-decoration: none;
+}
+
+.nav-links {
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.9);
+}
+
+ul.nav-cust {
+	list-style: none;
+}
+
+ul.nav-cust li {
+	padding: 5px 0;
+}
+
+.page-head {
+	padding-top: 30px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+
+.under-l {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.nav-brand-cust {
+	padding-left: 40px;
+	padding-top: 30px;
+}
+
+.landing img {
+	height: 200px;
+}
+
+
+.product {
+	margin-bottom: 20px;
+}
+
+.empty-padding {
+	padding-top: 20px;
+}
+
+
+/* Shop Page
+-------------------- */
+.show-img {
+	height: 400px;
+	width: auto;
+}
+
+.show-container {
+	margin-top: 30px;
+	margin-bottom: 80px;
+}
+
+.input-quantity {
+	width: 50px;
+	padding: 5px 1px;
+}
+
+.show-price {
+	color: #7A7A7A;
+}
+
+/* Bootstrap resets
+-------------------- */
+.btn {
+	border-radius: 0;
+	cursor: pointer;
+}
+
+.badge {
+	border-radius: 0;
+	font-size: 18px;
+}
+
+a.btn-primary {
+	background-color: #d98026;
+	border: none;	
+}
+a.btn-primary:hover {
+	color: #ff8000;	
+}
+
+button.btn-primary {
+	background-color: #d98026;
+	border: none;	
+}
+button.btn-primary:hover {
+	color: #ff8000;	
+}
+
+input.btn-primary {
+	background-color: #d98026;
+	border: none;	
+}
+input.btn-primary:hover {
+	background-color: #ff8000;	
+}
+
+.fa.fa-shopping-cart {
+	font-size: 23px;
+	cursor: pointer;
+}
+
+

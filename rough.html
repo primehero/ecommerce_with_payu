@@ -1,0 +1,14 @@
+			    <p class="card-text"><%= p.description %></p>
+
+
+		<div>
+			<h4><%= p.name %></h4>
+			<img src="<%= p.image %>">	
+			<p><%= p.description %></p>
+			<p>Cost: <span>$ <%= p.price %></span></p>
+
+			<form action="/cart/<%= p._id %>" method="GET">
+				<input type="hidden" name="q" value="1">
+				<input type="submit" value="Buy">
+			</form>
+		</div>	

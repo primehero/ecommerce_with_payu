@@ -1,0 +1,34 @@
+<% include ./partials/header.ejs %>
+
+
+	<div class="container show-container">
+
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/products">Shop</a></li>
+		<li class="breadcrumb-item active"><%= product.name %></li>
+	</ol>
+
+		<div class="row">
+			<div class="col-md-4">
+				<img class="show-img" src="<%= product.image %>">
+			</div>
+			<div class="col-md-6">
+				<h2>
+					<%= product.name %>
+				</h2>
+				<p>
+					<%= product.description %>	
+				</p>
+				<p>
+					<span class="show-price">Price:</span> $ <%= product.price %>	
+				</p>
+				<form action="/cart/<%= product._id %>">
+					<input type="text" class="input-quantity" name="q" value="1">
+					&nbsp;&nbsp;&nbsp;
+					<input class="btn btn-warning" type="submit" value="Add to cart">
+				</form>
+			</div>
+		</div>		
+	</div>
+
+<% include ./partials/footer.ejs %>

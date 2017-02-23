@@ -1,0 +1,33 @@
+<% include ./partials/header.ejs %>
+
+	<h2 class="page-head">
+		<span class="under-l">
+			Products
+		</span>
+	</h2>
+
+	<div class="row">			
+
+	<% products.forEach(p => { %>
+		
+		<div class="col-md-3 product">
+			<div class="card">
+			  <img class="card-img-top img-responsive" src="<%= p.image %>" alt="Card image cap">
+			  <div class="card-block">
+			    <p class="card-title"><%= p.name %></p>
+			    <form action="/cart/<%= p._id %>" method="GET">
+					<input type="hidden" name="q" value="1">
+					<input type="submit" value="Buy" class="btn btn-primary">
+					&nbsp;&nbsp;&nbsp;
+					<a href="/products/<%= p._id %>">Know More</a>
+				</form>
+
+			  </div>
+			</div>
+		</div>
+
+	<% }); %>
+
+	</div> 
+
+<% include ./partials/footer.ejs %>

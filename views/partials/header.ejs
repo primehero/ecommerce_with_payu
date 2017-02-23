@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tcommerce - Products Page</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato|Sansita" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-2">
+			<!-- NAVBAR
+			================================================ -->
+			<h4 class="nav-brand-cust">T Commerce</h4>
+
+			<ul class="nav-cust">
+				<li><a class="nav-links" href="/">Home</a></li>
+				<li><a class="nav-links" href="/products">Shop</a></li>
+				<li><a class="nav-links" href="/cart">Cart</a></li>
+				<li>
+					<i class="fa fa-shopping-cart" aria-hidden="true" onclick="javascript: window.location.pathname = '/cart'"></i>
+					&nbsp;
+					<span class="badge badge-default">
+						<%= cart.numItems %>
+					</span>
+				</li>
+			</ul>
+			<!-- END OF NAVBAR -->
+		</div>
+		<!-- ./col -->
+
+	<div class="col-md-10">
+		<div class="container">
+
+			<div class="empty-padding"></div>
+			<% if (success && success.length>0) { %>
+				<div class="alert alert-success">				
+					<%= success; %>
+				</div>
+			<% } %>
+			<% if (failure && failure.length>0) { %>
+				<div class="alert alert-danger">				
+					<%= failure; %>
+				</div>
+			<% } %>
