@@ -136,7 +136,7 @@ routes.post("/success", (req, res) => {
 		 */
 		(function() {
 			return new Promise((resolve, reject) => {
-				Order.findById(req.body.udf1).populate("items._id").exec((err, foundOrder) => {
+				Order.findById(req.body.udf1).populate("items._self_id").exec((err, foundOrder) => {
 					if (err) reject(err);
 					resolve({ order: foundOrder, data: req.body, oi: req.body.udf1 });
 				});
