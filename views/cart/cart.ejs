@@ -1,4 +1,4 @@
-<% include ./partials/header.ejs %>
+<% include ../partials/header.ejs %>
 
 	<h2 class="page-head">
 		<span class="under-l">
@@ -11,11 +11,14 @@
 			<li>
 				<%= i.name %> - <%= i.quantity %> no's -
 				<form action="/cart/<%= i._id %>?_method=delete" method="POST">
-					<input type="submit" value="Remove Item" class="btn btn-danger btn-sm">
+					<button class="btn btn-danger btn-sm">
+						<i class="fa fa-times" aria-hidden="true"></i>
+					</button>
 				</form>
 			</li>
 		<% }); %>
 	</ul>
 	<h4>Total: $ <%= cart.total %></h4>
+	<a class="btn btn-primary" href="/payment/checkout">Checkout</a>
 
-<% include ./partials/footer.ejs %>
+<% include ../partials/footer.ejs %>

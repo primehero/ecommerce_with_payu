@@ -1,0 +1,73 @@
+<% include ../partials/header-1.ejs %>
+
+<div class="row">
+  <div class="container">
+    <div class="col-md-6">
+    <form class="well form-horizontal" action="/payment" method="POST" id="contact_form">
+      <fieldset>
+      <!-- Form Name -->
+      <legend>Customer Details</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <div class="input-group">
+          <input name="firstname" placeholder="First Name" class="form-control"  type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">    
+        <div class="input-group">
+          <input name="lastname" placeholder="Last Name" class="form-control"  type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">    
+        <div class="input-group">
+          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->       
+      <div class="form-group">    
+        <div class="input-group">
+          <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->     
+      <div class="form-group">    
+        <div class="input-group">
+          <input name="address" placeholder="Address" class="form-control" type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+       
+      <div class="form-group">
+        <div class="input-group">
+          <input name="city" placeholder="city" class="form-control"  type="text">
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">    
+        <div class="input-group">
+          <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+        </div>
+      </div>
+
+      <!-- Button -->
+      <button class="btn btn-primary">
+        Continue         
+      </button>
+
+      </fieldset>
+    </form>
+    </div>
+  </div><!-- /.container -->
+</div>
+
+
+<% include ../partials/footer.ejs %>

@@ -8,7 +8,7 @@ routes.get("/", (req, res) => {
 		req.flash("failure", "Your cart is empty!");
 		res.redirect("/products");
 	} else {
-		res.render("cart");		
+		res.render("cart/cart");		
 	}
 });
 

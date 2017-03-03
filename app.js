@@ -4,20 +4,23 @@ const express      = require("express"),
 	  cookieParser = require("cookie-parser"),
 	  session	   = require("express-session"),
 	  flash        = require("connect-flash"),
-	  methodOverride = require("method-override");
+	  methodOverride = require("method-override")
+	  bodyParser     = require("body-parser");
 
-const Product     = require("./models/product.js"),
-	  seed        = require("./seed.js"),
-	  Cart        = require("./classes/cart.js"),
-	  indexRoutes = require("./routes"),
-	  cartRoutes = require("./routes/cart.js");
-	  productsRoutes = require("./routes/products.js");
+const Product        = require("./models/product.js"),
+	  seed           = require("./seed.js"),
+	  Cart           = require("./classes/cart.js"),
+	  indexRoutes    = require("./routes"),
+	  cartRoutes     = require("./routes/cart.js"),
+	  productsRoutes = require("./routes/products.js"),
+	  paymentRoutes  = require("./routes/payment.js"),
+	  adminRoutes    = require("./routes/admin.js");
 
 const PORT = process.env.PORT || 1337,
 	  IP = process.env.IP || "0.0.0.0",
 	  DB = process.env.DB || "mongodb://localhost/n_commerce";
 
-seed();
+// seed();
 
 // Define a new cart
 app.locals.cart = new Cart();
@@ -26,7 +29,9 @@ mongoose.connect(DB);
 
 
 app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
+
 app.use(cookieParser("secret"));
 app.use(session({
 	cookie: { maxAge: 60000 },
@@ -40,10 +45,13 @@ app.use((req, res, next) => {
 	res.locals.failure = req.flash("failure");
 	next();
 });
+
 app.use(express.static("public"));
 app.use("/", indexRoutes);
 app.use("/cart", cartRoutes);
 app.use("/products", productsRoutes);
+app.use("/payment", paymentRoutes);
+app.use("/admin", adminRoutes);
 
 app.use((req, res, next) => {
 	res.locals.cart = app.locals.cart;

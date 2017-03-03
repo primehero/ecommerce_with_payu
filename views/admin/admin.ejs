@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="row">
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th>S.no</th>
+	      <th>First Name</th>
+	      <th>Email</th>
+	      <th></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	  <% var i = 0; %>
+	  <% orders.forEach((order) => { %>
+	  	<% if (order.prepaid === true) { %>
+	    <tr>
+	      <th scope="row"><%= i+1 %></th>
+	      <td><%= order.firstname %></td>
+	      <td><%= order.email %></td>
+	      <td><a href="/admin/<%= order._id %>">More Details</a></td>
+	    </tr>	
+	    <% i++; %>
+	    <% } %>
+	  <% }); %>
+	  </tbody>
+	</table>
+</body>
+</html>

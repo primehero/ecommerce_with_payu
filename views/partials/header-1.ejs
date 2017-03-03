@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tcommerce - Products Page</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato|Sansita" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+</head>
+<body style="display: none;">
+		<div class="container">
+
+			<div class="empty-padding"></div>
+			<% if (success && success.length>0) { %>
+				<div class="alert alert-success">				
+					<%= success; %>
+				</div>
+			<% } %>
+			<% if (failure && failure.length>0) { %>
+				<div class="alert alert-danger">				
+					<%= failure; %>
+				</div>
+			<% } %>

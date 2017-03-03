@@ -92,20 +92,23 @@ ul.nav-cust li {
 	font-size: 18px;
 }
 
+a.btn.btn-primary, 
 a.btn-primary {
 	background-color: #d98026;
 	border: none;	
 }
+
+a.btn.btn-primary:hover, 
 a.btn-primary:hover {
-	color: #ff8000;	
+	background-color: #ff8000;	
 }
 
-button.btn-primary {
+button.btn.btn-primary {
 	background-color: #d98026;
 	border: none;	
 }
-button.btn-primary:hover {
-	color: #ff8000;	
+button.btn.btn-primary:hover {
+	background-color: #ff8000;	
 }
 
 input.btn-primary {
